@@ -14,3 +14,4 @@ pub mod oracle;
 pub mod rate_model;
 pub mod vault;
 pub mod vesting;
+pub mod pool;

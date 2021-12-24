@@ -729,6 +729,19 @@ impl vault::Config for Runtime {
 	type MinimumWithdrawal = VaultMinimumWithdrawal;
 }
 
+impl pool::Config for Runtime {
+	type Event = event;
+	type Balance = Balance;
+	type CurrencyFactory = Factory;
+	type NativeAssetId = NativeAssetId;
+	type AssetId = CurrencyId;
+	type Currency = Assets;
+	type Convert = sp_runtime::traits::ConvertInto;
+
+	type CreationDeposit = CreationDeposit;
+	type ExistentialDeposit = VaultExistentialDeposit;
+}
+
 parameter_types! {
 	pub const DynamicCurrencyIdInitial: CurrencyId = CurrencyId::LOCAL_LP_TOKEN_START;
 }
@@ -894,6 +907,8 @@ construct_runtime!(
 		AssetsRegistry: assets_registry::{Pallet, Call, Storage, Event<T>} = 55,
 		GovernanceRegistry: governance_registry::{Pallet, Call, Storage, Event<T>} = 56,
 		Assets: assets::{Pallet, Call, Storage} = 57,
+
+		Pool: pool::{Pallet, Call, Storage, Event<T>} = 62,
 
 		CallFilter: call_filter::{Pallet, Call, Storage, Event<T>} = 100,
 	}

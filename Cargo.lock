@@ -6852,6 +6852,31 @@ dependencies = [
 ]
 
 [[package]]
+name = "pallet-pool"
+version = "0.0.1"
+dependencies = [
+ "bitflags",
+ "composable-traits",
+ "frame-support",
+ "frame-system",
+ "log 0.4.14",
+ "num-integer",
+ "num-traits",
+ "orml-tokens 0.4.1-dev (git+https://github.com/open-web3-stack/open-runtime-module-library?rev=5670bfa4360c9c33eb651a2b911cbbc54caa1c93)",
+ "orml-traits 0.4.1-dev (git+https://github.com/open-web3-stack/open-runtime-module-library?rev=5670bfa4360c9c33eb651a2b911cbbc54caa1c93)",
+ "pallet-vault",
+ "parity-scale-codec",
+ "proptest 0.9.6",
+ "scale-info",
+ "serde",
+ "sp-arithmetic",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
 name = "pallet-proxy"
 version = "4.0.0-dev"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.12#d76f39995315ec36980908e4b99709bd14927044"
@@ -7150,24 +7175,6 @@ dependencies = [
  "scale-info",
  "serde",
  "sp-arithmetic",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
-]
-
-[[package]]
-name = "pallet-vault-group"
-version = "0.1.0"
-dependencies = [
- "composable-traits",
- "frame-support",
- "frame-system",
- "pallet-balances",
- "parity-scale-codec",
- "scale-info",
- "serde",
- "smallvec 1.7.0",
  "sp-core",
  "sp-io",
  "sp-runtime",
